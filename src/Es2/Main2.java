@@ -25,6 +25,14 @@ public class Main2 {
         ArrayList<String> outputList = joinReversedList(listToMirror);
         System.out.println(outputList);
 
+
+        // test Terzo metodo
+
+        ArrayList<Integer> listToCheckandPrint = new ArrayList<>(List.of(10, 33, 44, 52, 1, 87, 129));
+        System.out.println("Pari: ");
+        printEvenOdd(listToCheckandPrint, true); // per pari
+        System.out.println("Dispari: ");
+        printEvenOdd(listToCheckandPrint, false); // per dispari
     }
 
     // Primo metodo
@@ -59,5 +67,25 @@ public class Main2 {
 
     }
 
+    // Terzo metodo
+
+    public static void printEvenOdd(ArrayList<Integer> list, boolean isEven) {
+        for (int i = 0; i < list.size(); i++) {
+
+            int posizione = i + 1; // se no strano per utente
+
+            if (isEven) { // voglio pari
+
+                if (posizione % 2 == 0) { // se posizione pari
+                    System.out.println(list.get(i));
+                }
+            } else { // voglio pari dispari
+
+                if (posizione % 2 != 0) {
+                    System.out.println(list.get(i));
+                }
+            }
+        }
+    }
 
 }
